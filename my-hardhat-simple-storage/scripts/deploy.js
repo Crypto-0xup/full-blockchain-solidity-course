@@ -3,10 +3,12 @@ const {ethers, run, network} = require ('hardhat');
 
 //  async main
 async function main () {
+  // 拿到当前合约的工厂
   const SimpleStorageFactory = await ethers.getContractFactory (
     'SimpleStorage'
   );
   console.log ('Deploying contract...');
+  // 部署合约
   const simpleStorage = await SimpleStorageFactory.deploy ();
   await simpleStorage.deployed ();
 
