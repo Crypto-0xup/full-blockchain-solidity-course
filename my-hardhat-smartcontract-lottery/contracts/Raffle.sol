@@ -76,6 +76,10 @@ contract Raffle is VRFConsumerBaseV2, KeeperCompatibleInterface {
         i_interval = interval;
     }
 
+    fallback() external payable {}
+
+    receive() external payable {}
+
     /**
      * 玩家入场
      */
